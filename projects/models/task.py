@@ -14,7 +14,7 @@ class Task(models.Model):
         low = 1,"Low"
         medium = 2,"Medium"
         high = 3,"High"
-        crirtical = 4,"Critical"
+        critical = 4,"Critical"
 
 
     name = models.CharField(
