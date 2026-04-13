@@ -11,6 +11,8 @@ from projects.serializers.tasks import (
 )
 from projects.serializers.tags import TagListSerializer, TagSerializer
 
+from projects.serializers.user import UserListSerializer, UserDetailSerializer
+
 
 __all__ = [
     "ProjectListSerializer",
@@ -22,4 +24,6 @@ __all__ = [
     "TaskUpdateSerializer",
     "TagListSerializer",
     "TagSerializer",
+    "UserListSerializer",
+    "UserDetailSerializer",
 ]
