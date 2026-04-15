@@ -8,7 +8,7 @@ def check_extension(file, allowed_extensions) -> bool:
     return file_extension in allowed_extensions
 
 
-def check_file_size(file, max_mb=2) -> bool:
+def check_file_size(file, max_mb=4) -> bool:
     file_size = file.size
     file_size_mb = file_size / (1024 * 1024)
     return file_size_mb < max_mb
@@ -25,7 +25,7 @@ def save_file(file_path, file_content) -> str:
     dir_path = os.path.dirname(file_path)
     os.makedirs(dir_path, exist_ok=True)
 
-    with open(file_path, 'w', encoding='utf-8') as f:
+    with open(file_path, 'wb') as f:
         for chunk in file_content.chunks(chunk_size=1024):
             f.write(chunk)
 
